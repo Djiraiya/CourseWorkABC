@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include <unistd.h>
+#include <stdlib.h>
+
 int main()
 {
 	while(1) {
         int number;
-        system("CLS");
+        if (system("clear")) system("cls");
         printf("________________________________\n");
         printf("|1-Select a text file           |\n");
         printf("|_______________________________|\n");
@@ -16,17 +17,17 @@ int main()
         scanf("%i", &number);
         switch (number) {
         case 1:
-        	printf("Place for first func \n");
-        	break;
+            printf("Place for first func \n");
+            break;
         case 2:
-			printf("Place for second func \n");
+	    printf("Place for second func \n");
             break;
         case 3:
     	    return 0;
         default:
-    	    printf("You entered an invalid menu item\n");
-    	    system("PAUSE");
+            getchar();
+            printf("You entered an invalid menu item, press 'Enter' and try again\n");
+	    getchar();
         }
     }
-    return 0;
 }
