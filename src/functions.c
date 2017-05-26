@@ -4,9 +4,8 @@
 
 extern char String[30000];
 extern int Words[15000];
-extern int Number;
+extern int Number, Type;
 extern char Name[15];
-extern int Type;
 
 void sort()
 {
@@ -22,7 +21,19 @@ void sort()
 			}
 		}
 	}
-}	
+}
+
+void print()
+{
+	printf("Sorted text:\n");
+	for (int i = 0; i < Number; i ++)
+	{
+		printf("%s ", &String[Words[i]]);
+	}
+	printf("\n");
+	getchar();
+	getchar();
+}
 
 void file()
 {
@@ -44,7 +55,7 @@ void file()
 		printf("Original text:\n");
 		printf("%s\n\n", String);
 	}
-	int i, j, Temp, Flag;
+	int i, Flag;
 	for (Number = 0, Flag = 1, i = 0; String[i]; i ++)
 	{
 		if (String[i] == ' ' || String[i] == ',' || String[i] == '.' || String[i]== '?' 
@@ -61,16 +72,4 @@ void file()
 	}
 	sort();
 	print();			
-}
-
-void print()
-{
-	printf("Sorted text:\n");
-	for (int i = 0; i < Number; i ++)
-	{
-		printf("%s ", &String[Words[i]]);
-	}
-	printf("\n");
-	getchar();
-	getchar();
 }
