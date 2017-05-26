@@ -1,5 +1,7 @@
 CFLAGS = -Wall -Werror
 
+.PHONY: clean all
+
 all : bin/ABC
 
 bin/ABC : build/main.o build/functions.o
@@ -10,3 +12,8 @@ build/main.o : src/main.c src/functions.h
 
 build/functions.o : src/functions.c src/functions.h
 	gcc -c src/functions.c -o build/functions.o $(CFLAGS)
+
+clean : 
+	rm -rf build/*.o
+	rm -rf bin/ABC
+	@echo "All files have been cleaned."
