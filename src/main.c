@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "functions.h"
+
+char String[30000];
+int Words[15000];
+int Number, Type;
+char Name[15];
 
 int main()
 {
@@ -17,7 +23,20 @@ int main()
         scanf("%i", &number);
         switch (number) {
         case 1:
-            printf("Place for first func \n");
+            if (system("clear")) system("cls");
+	    Type = 1;
+	    printf("Enter file name: ");
+	    scanf("%s", Name);
+	    FILE *f = fopen(Name, "r");
+	    if (f == NULL)
+	    {
+	    	printf(" File not found!\n");
+		getchar();
+		getchar();
+		break;
+	    }
+	    fclose(f);
+	    file();
             break;
         case 2:
 	    printf("Place for second func \n");
