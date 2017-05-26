@@ -3,5 +3,6 @@
 
 void sort();
 void file();
+void print();
 
 #endif
