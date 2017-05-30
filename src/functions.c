@@ -32,7 +32,6 @@ void print()
 	}
 	printf("\n");
 	getchar();
-	getchar();
 }
 
 void file()
@@ -59,7 +58,7 @@ void file()
 	for (Number = 0, Flag = 1, i = 0; String[i]; i ++)
 	{
 		if (String[i] == ' ' || String[i] == ',' || String[i] == '.' || String[i]== '?' 
-|| String[i] == '!' || String[i] == '\t' || String[i] == '-')
+|| String[i] == '!' || String[i] == '\t' || String[i] == '\n' || String[i] == '-')
 		{
 			String[i] = 0;
 			Flag = 1;
