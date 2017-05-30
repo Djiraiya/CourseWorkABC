@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "functions.h"
 
 char String[30000];
@@ -39,7 +40,12 @@ int main()
 	    file();
             break;
         case 2:
-	    printf("Place for second func \n");
+	    if (system("clear")) system("cls");
+	    Type = 2;
+	    if (Type == 2) fgets(String, sizeof String, stdin);
+	    printf("Enter text:\n");
+	    fgets(String, sizeof String, stdin);
+	    file();
             break;
         case 3:
     	    return 0;
