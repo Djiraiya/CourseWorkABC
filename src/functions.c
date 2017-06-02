@@ -28,7 +28,7 @@ void print()
 	printf("Sorted text:\n");
 	for (int i = 0; i < Number; i ++)
 	{
-		printf("%s ", &String[Words[i]]);
+		printf("%s\n", &String[Words[i]]);
 	}
 	printf("\n");
 	getchar();
