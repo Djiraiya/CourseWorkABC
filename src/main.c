@@ -38,6 +38,7 @@ int main()
 	    }
 	    fclose(f);
 	    file();
+	    getchar();
             break;
         case 2:
 	    if (system("clear")) system("cls");
